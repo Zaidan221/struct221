@@ -9,16 +9,20 @@ struct mahasiswa{
 };
 
 int main(){
-mahasiswa Zaidan;
 
-Zaidan.nim = "c030324070";
-Zaidan.nama = "Zaidan Saputra";
-Zaidan.alamat = "Jl.sungai andai no 4";
-Zaidan.ipk = 3.9;
+mahasiswa* Zaidan = new mahasiswa;
 
-cout << Zaidan.nim << "\n";
-cout << Zaidan.nama << "\n";
-cout << Zaidan.alamat << "\n";
-cout << Zaidan.ipk << "\n";
+    // Mengisi data menggunakan pointer
+    Zaidan->nim = "c030324070";
+    Zaidan->nama = "Zaidan Saputra";
+    Zaidan->alamat = "Jl. Sungai Andai No 4";
+    Zaidan->ipk = 3.9;
+
+    // Menampilkan data
+    cout << Zaidan->nim << "\n";
+    cout << Zaidan->nama << "\n";
+    cout << Zaidan->alamat << "\n";
+    cout << Zaidan->ipk << "\n";
+    
 }
 
