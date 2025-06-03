@@ -66,3 +66,17 @@ void Display(Stack *S) {
 
     cout << endl;
 }
+
+int main() {
+    Stack s;
+    InitializeStack(&s);
+
+    int pil;
+    ItemType data;
+
+    do {
+        system("cls"); 
+        Display(&s);
+        cout << "Menu Utama\n1. Push\n2. Pop\n3. Keluar\nPilih: ";
+        cin >> pil;
+        cin.ignore(); // membersihkan newline di buffer
