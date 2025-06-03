@@ -48,3 +48,21 @@ void Pop(Stack *S, ItemType *x) {
         *x = S->Item[S->Count];
     }
 }
+
+// Menampilkan isi stack
+void Display(Stack *S) {
+    if (Empty(S)) {
+        cout << "Data tidak tersedia." << endl;
+    } else {
+        cout << "Data tersimpan:" << endl;
+        for (int i = 0; i < S->Count; i++) {
+            cout << i + 1 << ". " << S->Item[i] << endl;
+        }
+    }
+
+    if (Full(S)) {
+        cout << "Stack Penuh." << endl;
+    }
+
+    cout << endl;
+}
