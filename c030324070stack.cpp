@@ -29,3 +29,13 @@ int Full(Stack *S) {
     return (S->Count == MAXSTACK);
 }
 
+// Fungsi Push
+void Push(ItemType x, Stack *S) {
+    if (Full(S))
+        cout << "Stack penuh! Data tidak dapat masuk!" << endl;
+    else {
+        S->Item[S->Count] = x;
+        ++(S->Count);
+    }
+}
+
