@@ -13,3 +13,9 @@ typedef struct {
     ItemType Item[MAXSTACK];
     int Count;
 } Stack;
+
+// Inisialisasi stack
+void InitializeStack(Stack *S) {
+    S->Count = 0;
+}
+
