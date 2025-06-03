@@ -39,3 +39,12 @@ void Push(ItemType x, Stack *S) {
     }
 }
 
+// Fungsi Pop
+void Pop(Stack *S, ItemType *x) {
+    if (Empty(S))
+        cout << "Stack masih kosong!" << endl;
+    else {
+        --(S->Count);
+        *x = S->Item[S->Count];
+    }
+}
