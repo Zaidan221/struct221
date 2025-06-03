@@ -80,3 +80,35 @@ int main() {
         cout << "Menu Utama\n1. Push\n2. Pop\n3. Keluar\nPilih: ";
         cin >> pil;
         cin.ignore(); // membersihkan newline di buffer
+
+                switch (pil) {
+            case 1:
+                if (!Full(&s)) {
+                    cout << "Masukkan data: ";
+                    getline(cin, data);
+                    Push(data, &s);
+                } else {
+                    cout << "Stack sudah penuh!\n";
+                    system("pause");
+                }
+                break;
+            case 2:
+                if (!Empty(&s)) {
+                    Pop(&s, &data);
+                    cout << "Data yang di-pop: " << data << endl;
+                } else {
+                    cout << "Stack kosong!\n";
+                }
+                system("pause");
+                break;
+            case 3:
+                cout << "Keluar dari program." << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid.\n";
+                system("pause");
+        }
+    } while (pil != 3);
+
+    return 0;
+}
